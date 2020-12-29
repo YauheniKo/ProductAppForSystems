@@ -22,7 +22,7 @@ public class MainController {
 
         Iterable<Product> products = productRepo.findAll();
 
-        if(filter !=null && !filter.isEmpty()) {
+        if (filter != null && !filter.isEmpty()) {
             products = productRepo.findByName(filter);
         } else {
             products = productRepo.findAll();
@@ -34,9 +34,9 @@ public class MainController {
     }
 
     @PostMapping("/add")
-    public String add(@RequestParam String name, @RequestParam int price, Model model){
+    public String add(@RequestParam String name, @RequestParam int price, Model model) {
 
-        Product product = new Product(name,price);
+        Product product = new Product(name, price);
 
         productRepo.save(product);
 
@@ -48,15 +48,14 @@ public class MainController {
 
     @GetMapping("/delete-prod/{id}")
     @Transactional
-    public String delete(@PathVariable("id") int id){
-       productRepo.deleteById(id);
+    public String delete(@PathVariable("id") int id) {
+        productRepo.deleteById(id);
         return "redirect:/";
     }
 
 
-
     @GetMapping("/edit-prod/{id}")
-    public String update(@PathVariable("id") int id, Model model){
+    public String update(@PathVariable("id") int id, Model model) {
         model.addAttribute("product", productRepo.getById(id));
         return "update";
     }
@@ -65,11 +64,11 @@ public class MainController {
     @PostMapping("/update-prod/{id}")
     String update(@PathVariable(value = "id") int id,
                   @RequestParam String name,
-                  @RequestParam String price,Model model) {
+                  @RequestParam String price, Model model) {
         Optional<Product> products = productRepo.findById(id);
 
 
-        Product product =products.get();
+        Product product = products.get();
 
         product.setName(name);
         product.setPrice(Integer.parseInt(price));
@@ -78,9 +77,8 @@ public class MainController {
         model.addAttribute("name", product.getName());
         model.addAttribute("price", product.getPrice());
 
-      return "afterUpdate";
+        return "afterUpdate";
     }
-
 
 
 }

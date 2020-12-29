@@ -1,11 +1,8 @@
 <#import "parts/common.ftlh" as c>
 
 <@c.page>
-<a class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Измененине продукта
-</a>
-<div class="collapse" id="collapseExample">
 
+<p>Изменение продукта</p>
     <div class="form-group mt-3">
         <form method="post"  action="/update-prod/${product.id}">
             <div class="form-group">
@@ -20,7 +17,7 @@
             </div>
         </form>
     </div>
-</div>
+
 
     <div>Продукт</div>
     <table class="table table-striped table-bordered">

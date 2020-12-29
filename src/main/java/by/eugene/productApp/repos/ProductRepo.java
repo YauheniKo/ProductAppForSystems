@@ -9,9 +9,6 @@ public interface ProductRepo extends CrudRepository<Product, Integer> {
 
     List<Product> findByName(String name);
     Product getById(int id);
-
-
-
     void deleteById(int id);
 
 
