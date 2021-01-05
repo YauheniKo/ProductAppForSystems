@@ -6,9 +6,9 @@
 2.Создать в DB таблицу
 3.Изменить настройки в application.properties для подключения к вашей DB:
 
-  spring.datasource.url=jdbc:postgresql://localhost/product_app_db                            # /product_app_db  -название вашей базы данных
-  spring.datasource.username=postgres                                                           # /postgres -имя пользователя бд
-  spring.datasource.password=root                                                              # /root -пароль для  бд 
+  # spring.datasource.url=jdbc:postgresql://localhost/product_app_db                            # /product_app_db  -название вашей базы данных
+  # spring.datasource.username=postgres                                                           # /postgres -имя пользователя бд
+  # spring.datasource.password=root                                                              # /root -пароль для  бд 
   
   
   4. Запустить программу в классе Application
