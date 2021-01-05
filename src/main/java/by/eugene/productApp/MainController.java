@@ -67,7 +67,6 @@ public class MainController {
                   @RequestParam String price, Model model) {
         Optional<Product> products = productRepo.findById(id);
 
-
         Product product = products.get();
 
         product.setName(name);
