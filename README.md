@@ -2,9 +2,12 @@
 Простая программа выполняющая все CRUD операции + поиск по названию продукта.
 
 Для корректной работы программы необходимо:
-1.Установить DataBase
-2.Создать в DB таблицу
-3.Изменить настройки в application.properties для подключения к вашей DB:
+
+1. Установить DataBase
+
+2. Создать в DB таблицу
+
+3. Изменить настройки в application.properties для подключения к вашей DB:
 
   а) spring.datasource.url=jdbc:postgresql://localhost/product_app_db  
                              
